@@ -1,0 +1,5 @@
+repo sync
+. pull
+. build/envsetup.sh
+lunch_combo cm_codinalte-eng
+make clean && time make -j5 bacon
