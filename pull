@@ -1,29 +1,23 @@
 #!/bin/bash
 echo "Patching frameworks_native -> STE OMX Fix"
 cd frameworks/native
-git fetch https://github.com/Team-Exhibit/beanstalk_frameworks_native
-git cherry-pick 1fcafc630eb5e0b46b2c76cbbb16cd1a1349577a
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_native refs/changes/52/63052/1 && git cherry-pick FETCH_HEAD
 cd ..
 echo "Patching frameworks_av -> STE Multimedia Fix"
 cd av
-git fetch https://github.com/TeamCanjica/android_frameworks_av
-git cherry-pick 803bb5dd145630c0239a61bd4d58c3728f2dba57
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_av refs/changes/72/62672/1 && git cherry-pick FETCH_HEAD
 cd ..
 echo "Patching frameworks_base -> Fix STE OMX"
 cd base
-git fetch https://github.com/TeamCanjica/android_frameworks_base
-git cherry-pick 3826055d49ec70ab3d0e130a8e444fd334806fa5
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs/changes/77/62677/1 && git cherry-pick FETCH_HEAD
 cd ../..
 echo "Patching system_core -> STE OMX Fix + Fix shutdown/reboot bug"
 cd system/core
-git fetch https://github.com/TeamCanjica/android_system_core
-git cherry-pick 910ccc43a23b042df3df12ed1bbbe32954749e59
-git cherry-pick 02f79390ff2d6a0e173d1dd8bfae02844d4c33a6
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_system_core refs/changes/74/62674/1 && git cherry-pick FETCH_HEAD
 cd ../..
 echo "low incoming call"
 cd packages/services/Telephony
-git fetch https://github.com/NovaFusion/android_packages_services_Telephony
-git cherry-pick 6e18ab650a9bc6f4d16df7160569a6d45415e9ec
+git fetch http://review.cyanogenmod.org/CyanogenMod/android_packages_services_Telephony refs/changes/75/62675/1 && git cherry-pick FETCH_HEAD
 cd ../..
 #echo "Patching bootable_recovery -> fix compile issue - undefined reference to 'gr_maxExW'"
 #cd bootable/recovery
@@ -34,7 +28,7 @@ cd ../..
 #cd frameworks/base/packages/SystemUI/res
 #cp drawable-xhdpi/bg_custom_header_overlay.png drawable-hdpi/
 #cd ../../../../..
-#echo "Patching frameworks_opt_telephony ->  Fixes issue of numeric carrier ID being shown instead of carrier name "
+#echo "Patching frameworks_opt_telephony -> Fixes issue of numeric carrier ID being shown instead of carrier name "
 #cd frameworks/opt/telephony
 #git fetch https://github.com/Team-Exhibit/android_frameworks_opt_telephony
 #git cherry-pick d805538f6f4005c6fc3a3cdced691bcc6d9c08d8
@@ -75,7 +69,7 @@ cd ../..
 #cd frameworks/base/packages/SystemUI/res
 #cp drawable-xhdpi/bg_custom_header_overlay.png drawable-hdpi/
 #cd ../../../../..
-#echo "Patching frameworks_opt_telephony ->  Fixes issue of numeric carrier ID being shown instead of carrier name "
+#echo "Patching frameworks_opt_telephony -> Fixes issue of numeric carrier ID being shown instead of carrier name "
 #cd frameworks/opt/telephony
 #git fetch https://gerrit.omnirom.org/android_frameworks_opt_telephony refs/changes/68/6568/2 && git cherry-pick FETCH_HEAD
 #cd ../../..
@@ -127,7 +121,7 @@ cd ../..
 #echo "OmniSwitch: Allow open app as floating window"
 #git fetch https://gerrit.omnirom.org/android_packages_apps_OmniSwitch refs/changes/61/6661/1 && git cherry-pick FETCH_HEAD
 #cd ../../..
-#echo "Patching Smart Phone Call  1/4"
+#echo "Patching Smart Phone Call 1/4"
 #cd frameworks/base
 #git fetch https://gerrit.omnirom.org/android_frameworks_base refs/changes/15/6315/4 && git cherry-pick FETCH_HEAD
 #cd ../..
