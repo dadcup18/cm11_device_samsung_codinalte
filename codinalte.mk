@@ -107,9 +107,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ste.cam.back.orientation=90 \
     ste.cam.ext.cfg.path.secondary=/system/usr/share/camera/config_file/aptina_mt9v113.dat
     
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/camera_symlink:system/bin/camera_symlink
-    
 
 # Wifi
 PRODUCT_COPY_FILES += \
