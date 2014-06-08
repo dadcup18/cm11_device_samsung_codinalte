@@ -503,13 +503,6 @@ service usbid_init /system/bin/usbid_init.sh
     class main
     oneshot
     
-# Camera Symlink
-service camera_symlink /system/bin/camera_symlink
-    class main
-    user root
-    oneshot
-
-
 # We must to setup two different services for p2p and wpa supplicants on bcm4334
 service wpa_supplicant /system/bin/wpa_supplicant \
 
