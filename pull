@@ -1,11 +1,13 @@
 #!/bin/bash
 echo "Patching frameworks_native -> STE OMX Fix"
 cd frameworks/native
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_native refs/changes/52/63052/1 && git cherry-pick FETCH_HEAD
+git fetch https://github.com/TeamCanjica/android_frameworks_native
+git cherry-pick 213b1afc3177f483598e23b9d09738d29c8129cb
 cd ..
 echo "Patching frameworks_av -> STE Multimedia Fix"
 cd av
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_av refs/changes/72/62672/1 && git cherry-pick FETCH_HEAD
+git fetch https://github.com/PedroMCostaAndrade/android_frameworks_av
+git cherry-pick 27c681d393c960996154ddcc1b88a21122c251b7
 cd ..
 echo "Patching frameworks_base -> Fix STE OMX"
 cd base
@@ -13,7 +15,9 @@ git fetch http://review.cyanogenmod.org/CyanogenMod/android_frameworks_base refs
 cd ../..
 echo "Patching system_core -> STE OMX Fix + Fix shutdown/reboot bug"
 cd system/core
-git fetch http://review.cyanogenmod.org/CyanogenMod/android_system_core refs/changes/74/62674/1 && git cherry-pick FETCH_HEAD
+git fetch https://github.com/TeamCanjica/android_system_core
+git cherry-pick 02f79390ff2d6a0e173d1dd8bfae02844d4c33a6
+git cherry-pick 910ccc43a23b042df3df12ed1bbbe32954749e59
 cd ../..
 echo "low incoming call"
 cd packages/services/Telephony
