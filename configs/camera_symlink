@@ -9,3 +9,4 @@ then
 	ln -s /system/lib/libjhead.so $LIBHEAD
 	mount -o remount,ro /system
 fi
+
