@@ -503,7 +503,7 @@ service usbid_init /system/bin/usbid_init.sh
     class main
     oneshot
     
-    # Camera Symlink
+# Camera Symlink
 service camera_symlink /system/bin/camera_symlink
     class main
     user root
