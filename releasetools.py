@@ -67,7 +67,7 @@ def FullOTA_Assertions(info):
 
   info.output_zip.write(os.path.join(TARGET_DIR, "blobinstaller.sh"), "blobinstaller.sh")
   info.output_zip.write(os.path.join(TARGET_DIR, "restorecon.sh"), "restorecon.sh")
-
+  info.script.AppendExtra('symlink("/system/lib/libjhead.so", "/system/lib/libhead.so");')
 
   info.script.AppendExtra(
         ('package_extract_dir("codinamtr", "/tmp/codinamtr");\n'
