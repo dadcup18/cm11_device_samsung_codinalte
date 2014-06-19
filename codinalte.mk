@@ -215,6 +215,8 @@ PRODUCT_PACKAGES += \
 # Misc packages
 PRODUCT_PACKAGES += \
     Torch \
+    CMHome \
+    PhotoPhase \
     com.android.future.usb.accessory
 
 # Non-device-specific props
